@@ -2,9 +2,10 @@ import ToggleTheme from "./ToggleTheme"
 
 const Header = ({ user }) => {
   return (
-    <div className="p-5  sm:rounded-xl dark:[##000511] flex justify-between items-center">
+    <header className="p-5 dark:[##000511] flex justify-between items-center border-b-2 border-[#1B1B1B]">
       <span className="text-gray-100">Olá, { user?.name  || "Usuário" }</span>
-      <ul className="flex">
+      <nav className="hidden md:block">
+      <ul className="list-none flex items-center justify-center space-x-9">
        <li className="text-dark-100 dark:text-blue-50">
             Para o seu negócio
         </li>
@@ -14,10 +15,16 @@ const Header = ({ user }) => {
         <li className="text-dark-100 dark:text-blue-50">
             Dúvidas
         </li>
-        
-      </ul>
-      <ToggleTheme />
-    </div>
+        <li className="text-dark-100 dark:text-blue-50" >
+          Login
+        </li>
+        <li className="text-dark-100 dark:text-blue-50">
+            Create your account
+        </li>
+        </ul>
+      </nav>
+      <ToggleTheme/>
+    </header>
   )
 }
 

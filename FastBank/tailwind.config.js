@@ -9,11 +9,11 @@ module.exports = {
     extend:{
       colors: {
         dark: {
-          100: 'rgb(18, 18, 18)',
+          100: '#212A3E',
           200: '(bg-slate-500)'
         },
         light:{
-          100: '#212A3E',
+          100: '#FFFFFF',
         }
       }
     },
