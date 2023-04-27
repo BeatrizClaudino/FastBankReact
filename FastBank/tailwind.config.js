@@ -10,7 +10,10 @@ module.exports = {
       colors: {
         dark: {
           100: 'rgb(18, 18, 18)',
-          200: 'rgb(51, 51, 51)'
+          200: '(bg-slate-500)'
+        },
+        light:{
+          100: '#212A3E',
         }
       }
     },
@@ -22,7 +25,7 @@ module.exports = {
       },
   },
 plugins: [
-  require('@tailwindcss/line-clamp'),
+  
   // ...
 ]
 }
