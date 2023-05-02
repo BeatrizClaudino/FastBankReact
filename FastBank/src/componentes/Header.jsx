@@ -1,9 +1,15 @@
+import { Link } from "react-router-dom"
 import ToggleTheme from "./ToggleTheme"
 
-const Header = ({ user }) => {
+const Header = ({ dados }) => {
+  // const navigate = useNavigate()
+  // const logout = () => {
+  //    localStorage.clear()
+  //    navigate('/')
+  //    window.location.reload(true);
+  // }
   return (
     <header className="p-5 dark:[##000511] flex justify-between items-center border-b-2 border-[#1B1B1B]">
-      <span className="text-gray-100">Olá, { user?.name  || "Usuário" }</span>
       <nav className="hidden md:block">
       <ul className="list-none flex items-center justify-center space-x-9">
        <li className="text-dark-100 dark:text-blue-50">
@@ -16,11 +22,17 @@ const Header = ({ user }) => {
             Dúvidas
         </li>
         <li className="text-dark-100 dark:text-blue-50" >
-          Login
+         <Link to="/login">Login</Link> 
         </li>
         <li className="text-dark-100 dark:text-blue-50">
             Create your account
         </li>
+        {
+          !dados?
+          <li><Link to={'/logar'} className='text-white hover:text-red-800'>Login</Link></li>
+          :<><li><Link to={'/logar'} className='text-white hover:text-red-800'>{dados.login}</Link></li>
+          <li><Link to={'/'} className='text-white hover:text-red-800' onClick={logout}>Sair</Link></li></>
+        }
         </ul>
       </nav>
       <ToggleTheme/>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Botao = (props) => {
     return ( 
-        <button className='bg-[#7BA8FF] w-80 h-14 rounded-lg' type={props.tipo}>{props.texto}</button>
+        <button onClick={props.evento} className='bg-[#6936F5] w-80 h-14 rounded-2xl' type={props.tipo}>{props.texto}</button>
     );
 }
  
